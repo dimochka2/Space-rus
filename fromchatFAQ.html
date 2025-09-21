@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ FromChat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .faq-category {
+            margin-bottom: 2rem;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            color: #6e8efb;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e6ef;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: white;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #6e8efb;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #f9fafc;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.2rem;
+        }
+        
+        .contact-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(106, 142, 251, 0.3);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            color: #777;
+            border-top: 1px solid #e0e6ef;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .faq-question {
+                padding: 1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 1rem;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FromChat.ru</div>
+        <div class="tagline">Ответы на часто задаваемые вопросы</div>
+    </header>
+    
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Поиск по вопросам..." id="searchInput">
+        </div>
+        
+        <div class="faq-category">
+            <h2 class="category-title">Общие вопросы</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Что такое FromChat.ru?</div>
+                <div class="faq-answer">
+                    FromChat.ru - это современная платформа для общения, предоставляющая удобный и безопасный мессенджер с расширенными возможностями для личного и делового общения.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Как зарегистрироваться на FromChat.ru?</div>
+                <div class="faq-answer">
+                    Чтобы зарегистрироваться на платформе FromChat нажмите на кнопку ''Зарегистрируйтесь'' далее напишите свое имя и пароль а затем нажать на кнопку ''Зарегистрироваться'' а потом снова войдите в систему.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Сколько стоит использование FromChat.ru?</div>
+                <div class="faq-answer">
+                    На данный момент мессенджер находится в статусе Бета поэтому все пока Бесплатно.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-category">
+            <h2 class="category-title">Безопасность и конфиденциальность</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Как FromChat.ru защищает мои данные?</div>
+                <div class="faq-answer">
+                    пропуск.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Могу ли я настроить конфиденциальность своего профиля?</div>
+                <div class="faq-answer">
+                    пропуск.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-category">
+            <h2 class="category-title">Функции и возможности</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Можно ли создавать групповые чаты?</div>
+                <div class="faq-answer">
+                    К сожелению, мы ещё не сделали эту функцию
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Есть ли голосовые и видео звонки?</div>
+                <div class="faq-answer">
+                    К сожелению, мы ещё не сделали эту функцию
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Как работает облачное хранилище?</div>
+                <div class="faq-answer">
+                    пропуск.
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2>Не нашли ответ на свой вопрос?</h2>
+            <p>Наша служба поддержки готова помочь вам с любыми вопросами</p>
+            <a href="mailto:fromchat123@gmail.com" class="contact-btn">Связаться с поддержкой</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 FromChat.ru. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // Добавляем обработчик клика для каждого вопроса
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Закрываем все открытые вопросы
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Переключаем текущий вопрос
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Добавляем функциональность поиска
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
